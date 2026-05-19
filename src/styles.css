@@ -18,8 +18,16 @@ h1,h2,h3,h4,h5,h6,.font-display { font-family: 'Inter', system-ui, sans-serif; l
 .animate-gradient { background-size: 200% 200%; animation: gradient-x 8s ease infinite; }
 .text-shimmer { background: linear-gradient(90deg,#3b82f6,#60a5fa,#93c5fd,#3b82f6); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 4s linear infinite; }
 .grid-pattern { background-image: linear-gradient(rgba(59,130,246,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.07) 1px, transparent 1px); background-size: 48px 48px; }
-.glass { background: rgba(15,23,42,0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.text-shimmer { background: linear-gradient(90deg,#fbbf24,#fde68a,#fbbf24,#f59e0b); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 4s linear infinite; }
+.text-gold { color: #f5c462; }
+.bg-gold { background-color: #f5c462; }
+.border-gold { border-color: #f5c462; }
+.grid-pattern { background-image: linear-gradient(rgba(245,196,98,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(245,196,98,0.07) 1px, transparent 1px); background-size: 48px 48px; }
+.glass { background: rgba(10,15,30,0.65); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.glow-gold { box-shadow: 0 0 60px -10px rgba(245,196,98,0.45); }
 .glow-blue { box-shadow: 0 0 60px -10px rgba(59,130,246,0.5); }
+.bg-navy { background-color: #0a1024; }
+.bg-navy-deep { background-color: #060a1a; }
 
 /*
  * Design system definition.
