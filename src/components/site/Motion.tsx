@@ -178,18 +178,16 @@ export function AnimatedSection({
   children,
   topWave,
   bottomWave,
-  waveColor = "#0a1024",
 }: {
   children: ReactNode;
   topWave?: boolean;
   bottomWave?: boolean;
-  waveColor?: string;
 }) {
   return (
     <>
-      {topWave && <WaveDivider color={waveColor} />}
+      {topWave && <WaveDivider />}
       <Reveal>{children}</Reveal>
-      {bottomWave && <WaveDivider flip color={waveColor} />}
+      {bottomWave && <WaveDivider flip />}
     </>
   );
 }
