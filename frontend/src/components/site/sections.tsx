@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import {
   FiArrowUpRight,
   FiCheck,
@@ -44,7 +44,7 @@ export function PageHero({
   highlight?: string;
   subtitle: string;
   image?: string;
-  breadcrumb: { label: string; to?: "/" | "/about" | "/partner" | "/services" | "/industries" | "/blogs" | "/contact" }[];
+  breadcrumb: { label: string; to?: string }[];
 }) {
   return (
     <section className="relative pt-32 pb-20 bg-navy-deep overflow-hidden">

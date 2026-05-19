@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useRouter } from "@tanstack/react-router";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiChevronDown, FiArrowUpRight } from "react-icons/fi";
 import logo from "../../assets/logo.png";
 
@@ -28,8 +28,8 @@ const NAV = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const router = useRouter();
-  const path = router.state.location.pathname;
+  const location = useLocation();
+  const path = location.pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

@@ -6,7 +6,7 @@
         }
     ],
     "buildCommand": "npm run build",
-    "outputDirectory": "dist/client",
+    "outputDirectory": "dist",
     "installCommand": "npm install",
     "framework": null
 }

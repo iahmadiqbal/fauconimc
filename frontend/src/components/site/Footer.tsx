@@ -1,16 +1,16 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FiMail, FiArrowUpRight, FiMapPin, FiClock, FiSend } from "react-icons/fi";
 import logo from "../../assets/logo.png";
 
 const QUICK = [
-  { l: "Home", to: "/" as const },
-  { l: "About Us", to: "/about" as const },
-  { l: "Our Partner", to: "/partner" as const },
-  { l: "Services", to: "/services" as const },
-  { l: "Industries", to: "/industries" as const },
-  { l: "Blogs", to: "/blogs" as const },
-  { l: "Contact Us", to: "/contact" as const },
+  { l: "Home", to: "/" },
+  { l: "About Us", to: "/about" },
+  { l: "Our Partner", to: "/partner" },
+  { l: "Services", to: "/services" },
+  { l: "Industries", to: "/industries" },
+  { l: "Blogs", to: "/blogs" },
+  { l: "Contact Us", to: "/contact" },
 ];
 const SERVICES = [
   "Auditing and Assurance",
