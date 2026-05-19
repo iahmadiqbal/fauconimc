@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Header from "../components/site/Header";
 import Footer from "../components/site/Footer";
 import { PageHero, ContactInfo, ContactForm, Offices, FAQ, CTAStrip } from "../components/site/sections";
+import { Reveal, WaveDivider } from "../components/site/Motion";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -27,11 +28,16 @@ function ContactPage() {
           subtitle="Reach a senior advisor directly — whether you're scoping a new engagement or just exploring options."
           breadcrumb={[{ label: "Home", to: "/" }, { label: "Contact" }]}
         />
-        <ContactInfo />
-        <ContactForm />
-        <Offices />
-        <FAQ />
-        <CTAStrip />
+        <WaveDivider />
+        <Reveal direction="left"><ContactInfo /></Reveal>
+        <WaveDivider />
+        <Reveal direction="zoom"><ContactForm /></Reveal>
+        <WaveDivider />
+        <Reveal direction="right"><Offices /></Reveal>
+        <WaveDivider />
+        <Reveal direction="blur"><FAQ /></Reveal>
+        <WaveDivider />
+        <Reveal><CTAStrip /></Reveal>
       </main>
       <Footer />
     </div>

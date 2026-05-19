@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { ScrollProgress, BlobField } from "../components/site/Motion";
 
 function NotFoundComponent() {
   return (
@@ -113,7 +114,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <ScrollProgress />
+      <BlobField />
+      <div className="relative z-10">
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }
