@@ -71,22 +71,42 @@ export function ScrollProgress() {
   );
 }
 
-/* ---------- Animated SVG wave divider ---------- */
-export function WaveDivider({ flip = false, color = "#0a1024" }: { flip?: boolean; color?: string }) {
+/* ---------- Animated SVG wave divider (transparent, gold stroke) ---------- */
+export function WaveDivider({ flip = false }: { flip?: boolean }) {
   return (
     <div className={`relative w-full leading-[0] ${flip ? "rotate-180" : ""}`} aria-hidden>
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="block w-full h-[80px] md:h-[120px]"
+        className="block w-full h-[60px] md:h-[90px]"
       >
+        <defs>
+          <linearGradient id="waveGold" x1="0" x2="1">
+            <stop offset="0%" stopColor="#f5c462" stopOpacity="0.0" />
+            <stop offset="50%" stopColor="#f5c462" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#f5c462" stopOpacity="0.0" />
+          </linearGradient>
+        </defs>
         <motion.path
-          fill={color}
+          fill="none"
+          stroke="url(#waveGold)"
+          strokeWidth="1.5"
           initial={{ pathLength: 0, opacity: 0 }}
           whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-          d="M0,40 C240,120 480,0 720,40 C960,80 1200,120 1440,40 L1440,120 L0,120 Z"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          d="M0,60 C240,140 480,-20 720,60 C960,140 1200,-20 1440,60"
+        />
+        <motion.path
+          fill="none"
+          stroke="url(#waveGold)"
+          strokeWidth="0.6"
+          opacity="0.4"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 2.4, ease: "easeOut", delay: 0.2 }}
+          d="M0,80 C240,10 480,150 720,80 C960,10 1200,150 1440,80"
         />
       </svg>
     </div>
