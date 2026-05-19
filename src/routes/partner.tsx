@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Header from "../components/site/Header";
 import Footer from "../components/site/Footer";
 import { PageHero, PartnerStory, PartnerSynergy, PartnerStack, StatsBand, Testimonial, CTAStrip } from "../components/site/sections";
+import { Reveal, WaveDivider } from "../components/site/Motion";
 
 export const Route = createFileRoute("/partner")({
   component: PartnerPage,
@@ -27,12 +28,18 @@ function PartnerPage() {
           subtitle="A specialized partnership with NestedSol — bringing modern technology to every Faucon engagement."
           breadcrumb={[{ label: "Home", to: "/" }, { label: "Partner" }]}
         />
-        <PartnerStory />
-        <PartnerSynergy />
-        <PartnerStack />
-        <StatsBand />
-        <Testimonial />
-        <CTAStrip />
+        <WaveDivider />
+        <Reveal direction="left"><PartnerStory /></Reveal>
+        <WaveDivider />
+        <Reveal direction="right"><PartnerSynergy /></Reveal>
+        <WaveDivider />
+        <Reveal direction="zoom"><PartnerStack /></Reveal>
+        <WaveDivider />
+        <Reveal direction="blur"><StatsBand /></Reveal>
+        <WaveDivider />
+        <Reveal><Testimonial /></Reveal>
+        <WaveDivider />
+        <Reveal><CTAStrip /></Reveal>
       </main>
       <Footer />
     </div>
